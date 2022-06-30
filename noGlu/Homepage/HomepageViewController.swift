@@ -3,14 +3,17 @@ import UIKit
 class HomepageViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultTableView: UITableView!
 
     private let searchBarDelegate = SearchDelegate()
+    private let resultDatasource = ResultDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dismissKeyboard()
         searchBar.delegate = searchBarDelegate
+        resultTableView.dataSource = resultDatasource
     }
 }
 
