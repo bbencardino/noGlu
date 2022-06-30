@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="search by location..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAF-vE-Twi">
-                                <rect key="frame" x="0.0" y="51" width="414" height="51"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search by location..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAF-vE-Twi">
+                                <rect key="frame" x="0.0" y="145" width="414" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="search"/>
@@ -27,9 +26,22 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="noGlu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-LI-q5v">
+                                <rect key="frame" x="163" y="76" width="89" height="31"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="31"/>
+                                <color key="textColor" red="0.70985536270000005" green="0.35043753439999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.89205153146711369" green="0.92211635886632803" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oQK-LI-q5v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3aj-Wz-gxJ"/>
+                            <constraint firstItem="UAF-vE-Twi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ND6-6x-x1Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UAF-vE-Twi" secondAttribute="bottom" constant="666" id="a81-hY-g5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UAF-vE-Twi" secondAttribute="trailing" id="fq3-C7-zAJ"/>
+                            <constraint firstItem="UAF-vE-Twi" firstAttribute="top" secondItem="oQK-LI-q5v" secondAttribute="bottom" constant="38" id="lAU-6B-h36"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="UAF-vE-Twi" id="sl8-Rl-g1n"/>
@@ -37,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481" y="20"/>
+            <point key="canvasLocation" x="-645" y="23"/>
         </scene>
     </scenes>
     <resources>

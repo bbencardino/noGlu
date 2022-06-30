@@ -17,6 +17,7 @@
 		5EA8D4D6286C82C100AE85E7 /* noGluTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4D5286C82C100AE85E7 /* noGluTests.swift */; };
 		5EA8D4E0286C82C100AE85E7 /* noGluUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4DF286C82C100AE85E7 /* noGluUITests.swift */; };
 		5EA8D4E2286C82C100AE85E7 /* noGluUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */; };
+		5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EABF02B286DCFF00005494C /* SearchDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5EA8D4DB286C82C100AE85E7 /* noGluUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noGluUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA8D4DF286C82C100AE85E7 /* noGluUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noGluUITests.swift; sourceTree = "<group>"; };
 		5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noGluUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EABF02B286DCFF00005494C /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,8 @@
 			children = (
 				5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */,
 				5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */,
-				5EA8D4BF286C82BE00AE85E7 /* HomepageViewController.swift */,
+				5EABF02D286DFE0A0005494C /* Components */,
+				5EABF02A286DCF970005494C /* Homepage */,
 				5EA8D4C1286C82BE00AE85E7 /* Main.storyboard */,
 				5EA8D4C7286C82C100AE85E7 /* Assets.xcassets */,
 				5EA8D4C9286C82C100AE85E7 /* LaunchScreen.storyboard */,
@@ -128,6 +131,30 @@
 				5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */,
 			);
 			path = noGluUITests;
+			sourceTree = "<group>";
+		};
+		5EABF02A286DCF970005494C /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8D4BF286C82BE00AE85E7 /* HomepageViewController.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		5EABF02D286DFE0A0005494C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5EABF02E286DFE140005494C /* Search Bar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5EABF02E286DFE140005494C /* Search Bar */ = {
+			isa = PBXGroup;
+			children = (
+				5EABF02B286DCFF00005494C /* SearchDelegate.swift */,
+			);
+			path = "Search Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +311,7 @@
 			files = (
 				5EA8D4C0286C82BE00AE85E7 /* HomepageViewController.swift in Sources */,
 				5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */,
+				5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */,
 				5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */,
 				5EA8D4C6286C82BE00AE85E7 /* noGlu.xcdatamodeld in Sources */,
 			);
