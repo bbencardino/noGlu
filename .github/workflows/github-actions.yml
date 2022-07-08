@@ -4,5 +4,6 @@ jobs:
   run-tests:
     runs-on: macos-latest
     steps:
-    - run: fastlane tests
+      - uses: actions/checkout@v3
+      - run: fastlane tests
 
