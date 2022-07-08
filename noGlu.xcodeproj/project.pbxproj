@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2FE9AD28743B1B00CA6F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9AC28743B1B00CA6F6F /* HomeViewModel.swift */; };
+		5E2FE9B028743B6E00CA6F6F /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9AF28743B6E00CA6F6F /* HomeViewModelTests.swift */; };
+		5E2FE9B628743DA200CA6F6F /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9B528743DA200CA6F6F /* PlacesAPI.swift */; };
+		5E2FE9B92874409400CA6F6F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9B82874409400CA6F6F /* Place.swift */; };
+		5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9BD287456E600CA6F6F /* ServiceError.swift */; };
+		5E2FE9C0287471AF00CA6F6F /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9BF287471AF00CA6F6F /* NetworkProtocol.swift */; };
+		5E2FE9C32874786F00CA6F6F /* MockPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9C22874786F00CA6F6F /* MockPlaces.swift */; };
+		5E2FE9C8287487A300CA6F6F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9C7287487A300CA6F6F /* Network.swift */; };
+		5E2FE9CA28748AE000CA6F6F /* PlacesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9C928748AE000CA6F6F /* PlacesProtocol.swift */; };
+		5E3390242874AF700064FFF4 /*  PlacesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390232874AF700064FFF4 /*  PlacesJSON.swift */; };
+		5E3390282874BE560064FFF4 /* PlacesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390272874BE560064FFF4 /* PlacesAPITests.swift */; };
+		5E33902A2874C0820064FFF4 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390292874C0820064FFF4 /* MockNetwork.swift */; };
+		5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85423F28783D6800B2584B /* PlacesJSON.swift */; };
 		5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */; };
 		5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */; };
-		5EA8D4C0286C82BE00AE85E7 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BF286C82BE00AE85E7 /* HomepageViewController.swift */; };
+		5EA8D4C0286C82BE00AE85E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BF286C82BE00AE85E7 /* HomeViewController.swift */; };
 		5EA8D4C3286C82BE00AE85E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8D4C1286C82BE00AE85E7 /* Main.storyboard */; };
 		5EA8D4C6286C82BE00AE85E7 /* noGlu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4C4286C82BE00AE85E7 /* noGlu.xcdatamodeld */; };
 		5EA8D4C8286C82C100AE85E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8D4C7286C82C100AE85E7 /* Assets.xcassets */; };
 		5EA8D4CB286C82C100AE85E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8D4C9286C82C100AE85E7 /* LaunchScreen.storyboard */; };
-		5EA8D4D6286C82C100AE85E7 /* noGluTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4D5286C82C100AE85E7 /* noGluTests.swift */; };
-		5EA8D4E0286C82C100AE85E7 /* noGluUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4DF286C82C100AE85E7 /* noGluUITests.swift */; };
-		5EA8D4E2286C82C100AE85E7 /* noGluUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */; };
 		5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EABF02B286DCFF00005494C /* SearchDelegate.swift */; };
 		5ED5026C286E184D00144D86 /* ResultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026B286E184D00144D86 /* ResultDataSource.swift */; };
 		5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */; };
@@ -30,30 +40,32 @@
 			remoteGlobalIDString = 5EA8D4B7286C82BE00AE85E7;
 			remoteInfo = noGlu;
 		};
-		5EA8D4DC286C82C100AE85E7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EA8D4B0286C82BD00AE85E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EA8D4B7286C82BE00AE85E7;
-			remoteInfo = noGlu;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E2FE9AC28743B1B00CA6F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5E2FE9AF28743B6E00CA6F6F /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		5E2FE9B528743DA200CA6F6F /* PlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
+		5E2FE9B82874409400CA6F6F /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		5E2FE9BD287456E600CA6F6F /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		5E2FE9BF287471AF00CA6F6F /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		5E2FE9C22874786F00CA6F6F /* MockPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlaces.swift; sourceTree = "<group>"; };
+		5E2FE9C7287487A300CA6F6F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5E2FE9C928748AE000CA6F6F /* PlacesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesProtocol.swift; sourceTree = "<group>"; };
+		5E3390232874AF700064FFF4 /*  PlacesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PlacesJSON.swift"; sourceTree = "<group>"; };
+		5E3390272874BE560064FFF4 /* PlacesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPITests.swift; sourceTree = "<group>"; };
+		5E3390292874C0820064FFF4 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
+		5E85423F28783D6800B2584B /* PlacesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesJSON.swift; sourceTree = "<group>"; };
 		5EA8D4B8286C82BE00AE85E7 /* noGlu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noGlu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EA8D4BF286C82BE00AE85E7 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		5EA8D4BF286C82BE00AE85E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EA8D4C2286C82BE00AE85E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EA8D4C5286C82BE00AE85E7 /* noGlu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = noGlu.xcdatamodel; sourceTree = "<group>"; };
 		5EA8D4C7286C82C100AE85E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EA8D4CA286C82C100AE85E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EA8D4CC286C82C100AE85E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EA8D4D1286C82C100AE85E7 /* noGluTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noGluTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EA8D4D5286C82C100AE85E7 /* noGluTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noGluTests.swift; sourceTree = "<group>"; };
-		5EA8D4DB286C82C100AE85E7 /* noGluUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noGluUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EA8D4DF286C82C100AE85E7 /* noGluUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noGluUITests.swift; sourceTree = "<group>"; };
-		5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noGluUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5EABF02B286DCFF00005494C /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 		5ED5026B286E184D00144D86 /* ResultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDataSource.swift; sourceTree = "<group>"; };
 		5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,22 +86,94 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EA8D4D8286C82C100AE85E7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2FE9AE28743B4800CA6F6F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9AF28743B6E00CA6F6F /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5E2FE9B128743C9400CA6F6F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9C62874877100CA6F6F /* Network */,
+				5E2FE9BC287456CC00CA6F6F /* Error */,
+				5E2FE9B72874408200CA6F6F /* Response */,
+				5E2FE9B228743CE500CA6F6F /* PlacesAPI */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5E2FE9B228743CE500CA6F6F /* PlacesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9B528743DA200CA6F6F /* PlacesAPI.swift */,
+				5E2FE9C928748AE000CA6F6F /* PlacesProtocol.swift */,
+				5E85423F28783D6800B2584B /* PlacesJSON.swift */,
+			);
+			path = PlacesAPI;
+			sourceTree = "<group>";
+		};
+		5E2FE9B72874408200CA6F6F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9B82874409400CA6F6F /* Place.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		5E2FE9BC287456CC00CA6F6F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9BD287456E600CA6F6F /* ServiceError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		5E2FE9C1287477FE00CA6F6F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9C22874786F00CA6F6F /* MockPlaces.swift */,
+				5E3390232874AF700064FFF4 /*  PlacesJSON.swift */,
+				5E3390292874C0820064FFF4 /* MockNetwork.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5E2FE9C62874877100CA6F6F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5E2FE9BF287471AF00CA6F6F /* NetworkProtocol.swift */,
+				5E2FE9C7287487A300CA6F6F /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5E3390252874BCDE0064FFF4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5E3390262874BCF90064FFF4 /* PlacesAPI */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5E3390262874BCF90064FFF4 /* PlacesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5E3390272874BE560064FFF4 /* PlacesAPITests.swift */,
+			);
+			path = PlacesAPI;
+			sourceTree = "<group>";
+		};
 		5EA8D4AF286C82BD00AE85E7 = {
 			isa = PBXGroup;
 			children = (
 				5EA8D4BA286C82BE00AE85E7 /* noGlu */,
 				5EA8D4D4286C82C100AE85E7 /* noGluTests */,
-				5EA8D4DE286C82C100AE85E7 /* noGluUITests */,
 				5EA8D4B9286C82BE00AE85E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +183,6 @@
 			children = (
 				5EA8D4B8286C82BE00AE85E7 /* noGlu.app */,
 				5EA8D4D1286C82C100AE85E7 /* noGluTests.xctest */,
-				5EA8D4DB286C82C100AE85E7 /* noGluUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +193,8 @@
 				5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */,
 				5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */,
 				5EABF02D286DFE0A0005494C /* Components */,
-				5EABF02A286DCF970005494C /* Homepage */,
+				5EABF02A286DCF970005494C /* Home */,
+				5E2FE9B128743C9400CA6F6F /* Service */,
 				5EA8D4C1286C82BE00AE85E7 /* Main.storyboard */,
 				5EA8D4C7286C82C100AE85E7 /* Assets.xcassets */,
 				5EA8D4C9286C82C100AE85E7 /* LaunchScreen.storyboard */,
@@ -123,26 +207,20 @@
 		5EA8D4D4286C82C100AE85E7 /* noGluTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EA8D4D5286C82C100AE85E7 /* noGluTests.swift */,
+				5E3390252874BCDE0064FFF4 /* Service */,
+				5E2FE9C1287477FE00CA6F6F /* Mocks */,
+				5E2FE9AE28743B4800CA6F6F /* Home */,
 			);
 			path = noGluTests;
 			sourceTree = "<group>";
 		};
-		5EA8D4DE286C82C100AE85E7 /* noGluUITests */ = {
+		5EABF02A286DCF970005494C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5EA8D4DF286C82C100AE85E7 /* noGluUITests.swift */,
-				5EA8D4E1286C82C100AE85E7 /* noGluUITestsLaunchTests.swift */,
+				5EA8D4BF286C82BE00AE85E7 /* HomeViewController.swift */,
+				5E2FE9AC28743B1B00CA6F6F /* HomeViewModel.swift */,
 			);
-			path = noGluUITests;
-			sourceTree = "<group>";
-		};
-		5EABF02A286DCF970005494C /* Homepage */ = {
-			isa = PBXGroup;
-			children = (
-				5EA8D4BF286C82BE00AE85E7 /* HomepageViewController.swift */,
-			);
-			path = Homepage;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		5EABF02D286DFE0A0005494C /* Components */ = {
@@ -210,24 +288,6 @@
 			productReference = 5EA8D4D1286C82C100AE85E7 /* noGluTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5EA8D4DA286C82C100AE85E7 /* noGluUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EA8D4EB286C82C100AE85E7 /* Build configuration list for PBXNativeTarget "noGluUITests" */;
-			buildPhases = (
-				5EA8D4D7286C82C100AE85E7 /* Sources */,
-				5EA8D4D8286C82C100AE85E7 /* Frameworks */,
-				5EA8D4D9286C82C100AE85E7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5EA8D4DD286C82C100AE85E7 /* PBXTargetDependency */,
-			);
-			name = noGluUITests;
-			productName = noGluUITests;
-			productReference = 5EA8D4DB286C82C100AE85E7 /* noGluUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,10 +303,7 @@
 					};
 					5EA8D4D0286C82C100AE85E7 = {
 						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 5EA8D4B7286C82BE00AE85E7;
-					};
-					5EA8D4DA286C82C100AE85E7 = {
-						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = 5EA8D4B7286C82BE00AE85E7;
 					};
 				};
@@ -266,7 +323,6 @@
 			targets = (
 				5EA8D4B7286C82BE00AE85E7 /* noGlu */,
 				5EA8D4D0286C82C100AE85E7 /* noGluTests */,
-				5EA8D4DA286C82C100AE85E7 /* noGluUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,13 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EA8D4CF286C82C100AE85E7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EA8D4D9286C82C100AE85E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,13 +372,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA8D4C0286C82BE00AE85E7 /* HomepageViewController.swift in Sources */,
+				5EA8D4C0286C82BE00AE85E7 /* HomeViewController.swift in Sources */,
+				5E2FE9C0287471AF00CA6F6F /* NetworkProtocol.swift in Sources */,
 				5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */,
 				5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */,
+				5E2FE9AD28743B1B00CA6F6F /* HomeViewModel.swift in Sources */,
 				5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */,
 				5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */,
 				5EA8D4C6286C82BE00AE85E7 /* noGlu.xcdatamodeld in Sources */,
 				5ED5026C286E184D00144D86 /* ResultDataSource.swift in Sources */,
+				5E2FE9B628743DA200CA6F6F /* PlacesAPI.swift in Sources */,
+				5E2FE9B92874409400CA6F6F /* Place.swift in Sources */,
+				5E2FE9CA28748AE000CA6F6F /* PlacesProtocol.swift in Sources */,
+				5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */,
+				5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */,
+				5E2FE9C8287487A300CA6F6F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,16 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA8D4D6286C82C100AE85E7 /* noGluTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EA8D4D7286C82C100AE85E7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EA8D4E2286C82C100AE85E7 /* noGluUITestsLaunchTests.swift in Sources */,
-				5EA8D4E0286C82C100AE85E7 /* noGluUITests.swift in Sources */,
+				5E3390282874BE560064FFF4 /* PlacesAPITests.swift in Sources */,
+				5E3390242874AF700064FFF4 /*  PlacesJSON.swift in Sources */,
+				5E33902A2874C0820064FFF4 /* MockNetwork.swift in Sources */,
+				5E2FE9B028743B6E00CA6F6F /* HomeViewModelTests.swift in Sources */,
+				5E2FE9C32874786F00CA6F6F /* MockPlaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,11 +409,6 @@
 			isa = PBXTargetDependency;
 			target = 5EA8D4B7286C82BE00AE85E7 /* noGlu */;
 			targetProxy = 5EA8D4D2286C82C100AE85E7 /* PBXContainerItemProxy */;
-		};
-		5EA8D4DD286C82C100AE85E7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EA8D4B7286C82BE00AE85E7 /* noGlu */;
-			targetProxy = 5EA8D4DC286C82C100AE85E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -489,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -506,6 +553,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GU6D4AYLD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = noGlu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -513,6 +561,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GU6D4AYLD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = noGlu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -540,6 +590,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,14 +609,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bbencardino.noGluTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/noGlu.app/noGlu";
@@ -577,10 +635,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bbencardino.noGluTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,40 +652,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/noGlu.app/noGlu";
-			};
-			name = Release;
-		};
-		5EA8D4EC286C82C100AE85E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bbencardino.noGluUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = noGlu;
-			};
-			name = Debug;
-		};
-		5EA8D4ED286C82C100AE85E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bbencardino.noGluUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = noGlu;
 			};
 			name = Release;
 		};
@@ -651,15 +681,6 @@
 			buildConfigurations = (
 				5EA8D4E9286C82C100AE85E7 /* Debug */,
 				5EA8D4EA286C82C100AE85E7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EA8D4EB286C82C100AE85E7 /* Build configuration list for PBXNativeTarget "noGluUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EA8D4EC286C82C100AE85E7 /* Debug */,
-				5EA8D4ED286C82C100AE85E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

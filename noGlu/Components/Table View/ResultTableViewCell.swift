@@ -1,6 +1,6 @@
 import UIKit
 
-class ResultTableViewCell: UITableViewCell {
+final class ResultTableViewCell: UITableViewCell {
 
     @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var placeImageView: UIImageView!
