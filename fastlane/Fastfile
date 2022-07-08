@@ -20,4 +20,9 @@ platform :ios do
   lane :tests do
     run_tests
   end
+
+  lane :validate do
+    swiftlint(raise_if_swiftlint_error: true, strict: true)
+    tests
+  end
 end
