@@ -25,12 +25,15 @@ final class HomeViewModel {
         }
     }
 
-    func updateCell() {
-
-    }
-
     // MARK: - Data Source
     func numberOfRows() -> Int {
         return places.count
+    }
+
+    // MARK: - Cell View Model
+    func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
+
+        let viewModel = ResultCellViewModel(place: places[index])
+        return viewModel
     }
 }

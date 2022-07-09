@@ -17,7 +17,7 @@ final class ResultDataSource: NSObject, UITableViewDataSource {
             fatalError("Table view cell is not ResultTableViewCell")
         }
 
-        cell.placeName.text = viewModel.places[indexPath.row].name
+        cell.viewModel = viewModel.makeResultCellViewModel(at: indexPath.row)
         return cell
     }
 }
