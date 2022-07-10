@@ -19,13 +19,13 @@ struct PlacesJSON {
             {
             "formatted_address": "50-52 Monmouth St, London WC2H 9EP, United Kingdom",
             "name": "Rossopomodoro Covent Garden",
-            "price_level": 2,
+            "price_level": 4,
             "rating": 4.2,
             },
             {
             "formatted_address": "20 Bow St, London WC2E 7AW, United Kingdom",
             "name": "Zizzi",
-            "price_level": 2,
+            "price_level": 5,
             "rating": 4.1,
             }
         ]
