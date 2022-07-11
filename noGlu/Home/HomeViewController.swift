@@ -9,8 +9,8 @@ final class HomeViewController: UIViewController {
     lazy var searchBarDelegate = SearchDelegate(viewModel: viewModel)
     lazy var resultDataSource = ResultDataSource(viewModel: viewModel)
 
-//    @IBOutlet weak var noConnectionView: UIView!
-//    @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var noConnectionView: UIView!
+    @IBOutlet weak var homeView: UIView!
     private let reachability = try? Reachability()
 
     override func viewDidLoad() {
@@ -54,8 +54,8 @@ final class HomeViewController: UIViewController {
     }
 
     private func showHomeScreen(_ hasInternet: Bool) {
-//        noConnectionView.isHidden = hasInternet
-//        homeView.isHidden = !hasInternet
+        noConnectionView.isHidden = hasInternet
+        homeView.isHidden = !hasInternet
     }
 }
 
