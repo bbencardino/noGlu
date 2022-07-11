@@ -30,8 +30,8 @@
 		5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EABF02B286DCFF00005494C /* SearchDelegate.swift */; };
 		5ED5026C286E184D00144D86 /* ResultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026B286E184D00144D86 /* ResultDataSource.swift */; };
 		5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */; };
-		5EEC36052879A121005C927B /* ResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36042879A121005C927B /* ResultCellViewModel.swift */; };
 		5EEC36032878AC54005C927B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36022878AC54005C927B /* Reachability.swift */; };
+		5EEC36052879A121005C927B /* ResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36042879A121005C927B /* ResultCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,8 @@
 		5EABF02B286DCFF00005494C /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 		5ED5026B286E184D00144D86 /* ResultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDataSource.swift; sourceTree = "<group>"; };
 		5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
-		5EEC36042879A121005C927B /* ResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModel.swift; sourceTree = "<group>"; };
 		5EEC36022878AC54005C927B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5EEC36042879A121005C927B /* ResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,7 +629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,7 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
