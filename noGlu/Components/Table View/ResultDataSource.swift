@@ -2,8 +2,13 @@ import UIKit
 
 final class ResultDataSource: NSObject, UITableViewDataSource {
 
+    private var viewModel: HomeViewModel!
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        viewModel.numberOfRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -12,6 +17,7 @@ final class ResultDataSource: NSObject, UITableViewDataSource {
             fatalError("Table view cell is not ResultTableViewCell")
         }
 
+        cell.viewModel = viewModel.makeResultCellViewModel(at: indexPath.row)
         return cell
     }
 }

@@ -1,12 +1,18 @@
 import UIKit
 
-class ResultTableViewCell: UITableViewCell {
+final class ResultTableViewCell: UITableViewCell {
+
+    var viewModel: ResultCellViewModel! {
+        didSet {
+            updateView()
+        }
+    }
 
     @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var placeName: UILabel!
 
-    @IBOutlet weak var priceId: UILabel!
+    @IBOutlet weak var priceRange: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
 
@@ -21,4 +27,9 @@ class ResultTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    private func updateView() {
+        rating.text = viewModel.rating
+        placeName.text = viewModel.placeName
+        priceRange.text = viewModel.priceRange
+    }
 }

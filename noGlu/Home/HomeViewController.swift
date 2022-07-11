@@ -1,23 +1,25 @@
 import UIKit
 
-class HomepageViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultTableView: UITableView!
 
+    private let viewModel = HomeViewModel()
+    lazy var searchBarDelegate = SearchDelegate(viewModel: viewModel)
+    lazy var resultDataSource = ResultDataSource(viewModel: viewModel)
+
     @IBOutlet weak var noConnectionView: UIView!
     @IBOutlet weak var homeView: UIView!
-
     private let reachability = try? Reachability()
-    private let searchBarDelegate = SearchDelegate()
-    private let resultDatasource = ResultDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dismissKeyboard()
         searchBar.delegate = searchBarDelegate
-        resultTableView.dataSource = resultDatasource
+        resultTableView.dataSource = resultDataSource
+        viewModel.reloadView = resultTableView.reloadData
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -57,12 +59,13 @@ class HomepageViewController: UIViewController {
     }
 }
 
-extension HomepageViewController {
+extension HomeViewController {
 
+    /// Dismiss keyboard when tapping outside search bar
     private func dismissKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: view,
                                                 action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-       // tapGesture.cancelsTouchesInView = false
+        tapGesture.cancelsTouchesInView = false
     }
 }
