@@ -1,0 +1,8 @@
+name: tests
+on: [pull_request]
+jobs: 
+  run-tests:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: fastlane validate

@@ -31,6 +31,7 @@
 		5ED5026C286E184D00144D86 /* ResultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026B286E184D00144D86 /* ResultDataSource.swift */; };
 		5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */; };
 		5EEC36052879A121005C927B /* ResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36042879A121005C927B /* ResultCellViewModel.swift */; };
+		5EEC36032878AC54005C927B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36022878AC54005C927B /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5ED5026B286E184D00144D86 /* ResultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDataSource.swift; sourceTree = "<group>"; };
 		5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5EEC36042879A121005C927B /* ResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModel.swift; sourceTree = "<group>"; };
+		5EEC36022878AC54005C927B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		5EA8D4BA286C82BE00AE85E7 /* noGlu */ = {
 			isa = PBXGroup;
 			children = (
+				5EEC36012878ABC4005C927B /* Networking */,
 				5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */,
 				5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */,
 				5EABF02D286DFE0A0005494C /* Components */,
@@ -250,6 +253,14 @@
 				5EEC36042879A121005C927B /* ResultCellViewModel.swift */,
 			);
 			path = "Table View";
+			sourceTree = "<group>";
+		};
+		5EEC36012878ABC4005C927B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC36022878AC54005C927B /* Reachability.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +394,7 @@
 				5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */,
 				5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */,
 				5EA8D4C6286C82BE00AE85E7 /* noGlu.xcdatamodeld in Sources */,
+				5EEC36032878AC54005C927B /* Reachability.swift in Sources */,
 				5ED5026C286E184D00144D86 /* ResultDataSource.swift in Sources */,
 				5E2FE9B628743DA200CA6F6F /* PlacesAPI.swift in Sources */,
 				5E2FE9B92874409400CA6F6F /* Place.swift in Sources */,
