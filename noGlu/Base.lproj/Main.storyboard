@@ -251,6 +251,9 @@
                                             <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="markFavorite:" destination="N4M-Dt-LdQ" eventType="touchUpInside" id="WAs-NP-fMi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
