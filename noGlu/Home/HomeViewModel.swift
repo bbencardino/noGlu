@@ -5,6 +5,8 @@ final class HomeViewModel {
     private let placesService: PlacesProtocol
     var places: [Place] = []
     var reloadView: (() -> Void)?
+    var performNavigation: ((Int) -> Void)?
+    var place: Int?
 
     init(service: PlacesProtocol = PlacesAPI(network: Network())) {
         self.placesService = service
@@ -32,8 +34,17 @@ final class HomeViewModel {
 
     // MARK: - Cell View Model
     func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
-
-        let viewModel = ResultCellViewModel(place: places[index])
-        return viewModel
+        return ResultCellViewModel(place: places[index])
     }
+
+    // MARK: - Place Details
+    func makePlaceDetailsViewModel(at index: Int) -> PlaceViewModel {
+        return PlaceViewModel(place: places[index])
+    }
+
+    func presentPlace(at index: Int) {
+        performNavigation?(index)
+    }
+
+    // try to make only one func - using generics
 }

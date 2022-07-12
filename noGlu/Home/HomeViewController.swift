@@ -8,6 +8,7 @@ final class HomeViewController: UIViewController {
     private let viewModel = HomeViewModel()
     lazy var searchBarDelegate = SearchDelegate(viewModel: viewModel)
     lazy var resultDataSource = ResultDataSource(viewModel: viewModel)
+    lazy var resultDelegate = ResultDelegate(viewModel: viewModel)
 
     @IBOutlet weak var noConnectionView: UIView!
     @IBOutlet weak var homeView: UIView!
@@ -19,9 +20,12 @@ final class HomeViewController: UIViewController {
         dismissKeyboard()
         searchBar.delegate = searchBarDelegate
         resultTableView.dataSource = resultDataSource
+        resultTableView.delegate = resultDelegate
         viewModel.reloadView = resultTableView.reloadData
+        viewModel.performNavigation = performNavigation
     }
 
+    // MARK: - Reachability
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -56,6 +60,22 @@ final class HomeViewController: UIViewController {
     private func showHomeScreen(_ hasInternet: Bool) {
         noConnectionView.isHidden = hasInternet
         homeView.isHidden = !hasInternet
+    }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTheDetails" {
+            guard let destination = segue.destination as? PlaceViewController
+            else { return }
+
+            guard let sender = sender as? Int else { return }
+            destination.viewModel = viewModel.makePlaceDetailsViewModel(at: sender)
+        }
+    }
+
+    func performNavigation(index: Int) {
+        performSegue(withIdentifier: "toTheDetails", sender: index)
     }
 }
 

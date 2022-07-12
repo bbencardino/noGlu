@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  noGlu
-//
-//  Created by Isabella Bencardino on 29/06/2022.
-//
-
 import UIKit
 import CoreData
 
