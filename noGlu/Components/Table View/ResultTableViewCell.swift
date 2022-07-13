@@ -5,7 +5,7 @@ final class ResultTableViewCell: UITableViewCell {
     var viewModel: ResultCellViewModel! {
         didSet {
             updateView()
-            saveFavorite()
+            changeButtonImage()
         }
     }
 
@@ -29,19 +29,12 @@ final class ResultTableViewCell: UITableViewCell {
     // MARK: - Mark Favorite
 
     @IBAction func markFavoritePlace(_ sender: UIButton) {
-        let heartFill = UIImage(systemName: "heart.fill")
-        let heart = UIImage(systemName: "heart")
-
-        if sender.currentImage == heart {
-            sender.setImage(heartFill, for: .normal)
-            viewModel.markFavoritePlace(true)
-        } else {
-            sender.setImage(heart, for: .normal)
-            viewModel.markFavoritePlace(false)
-        }
+        let isFavorite = !viewModel.isFavoritePlace
+        viewModel.markFavoritePlace(isFavorite)
+        changeButtonImage()
     }
 
-    private func saveFavorite() {
+    private func changeButtonImage() {
         let imageName = viewModel.isFavoritePlace ? "heart.fill" : "heart"
         favoriteButton.setImage(UIImage(systemName: imageName),
                                     for: .normal)

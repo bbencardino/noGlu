@@ -103,7 +103,7 @@
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.82207178176508688" green="0.85769848631327628" blue="0.93226481958762886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.89205153150000005" green="0.92211635889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstItem="qlC-xo-vch" firstAttribute="leading" secondItem="gta-P4-vgA" secondAttribute="trailing" constant="8" id="Alj-hG-ECR"/>
                                                                 <constraint firstItem="NGh-eX-BBN" firstAttribute="leading" secondItem="gta-P4-vgA" secondAttribute="trailing" constant="8" symbolic="YES" id="EaO-LA-9qJ"/>
@@ -127,7 +127,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="mfS-UG-Glb" secondAttribute="bottom" id="xC3-5O-NfP"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.89205153150000005" green="0.92211635889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.82207178179999996" green="0.85769848630000001" blue="0.93226481959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <connections>
                                                     <outlet property="favoriteButton" destination="1X1-nh-koz" id="UIn-NI-CNW"/>

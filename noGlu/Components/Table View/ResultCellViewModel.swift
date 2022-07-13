@@ -22,7 +22,6 @@ struct ResultCellViewModel {
     }
 
     // MARK: - Favourite place
-
     func markFavoritePlace(_ favorite: Bool) {
         userDefaults.write(favorite, forKey: placeName)
     }
