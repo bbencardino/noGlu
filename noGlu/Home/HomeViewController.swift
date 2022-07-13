@@ -16,7 +16,6 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         dismissKeyboard()
         configureView()
     }
@@ -25,6 +24,7 @@ final class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setReachability()
+        resultTableView.reloadData()
     }
 
     private func setReachability() {
