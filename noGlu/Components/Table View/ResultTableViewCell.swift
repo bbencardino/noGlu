@@ -5,6 +5,7 @@ final class ResultTableViewCell: UITableViewCell {
     var viewModel: ResultCellViewModel! {
         didSet {
             updateView()
+            changeButtonImage()
         }
     }
 
@@ -23,8 +24,20 @@ final class ResultTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
 
-        // Configure the view for the selected state
+    // MARK: - Mark Favorite
+
+    @IBAction func markFavoritePlace(_ sender: UIButton) {
+        let isFavorite = !viewModel.isFavoritePlace
+        viewModel.markFavoritePlace(isFavorite)
+        changeButtonImage()
+    }
+
+    private func changeButtonImage() {
+        let imageName = viewModel.isFavoritePlace ? "heart.fill" : "heart"
+        favoriteButton.setImage(UIImage(systemName: imageName),
+                                    for: .normal)
     }
 
     private func updateView() {

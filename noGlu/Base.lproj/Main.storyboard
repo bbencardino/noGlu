@@ -98,9 +98,12 @@
                                                                         <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="markFavoritePlace:" destination="vov-gu-DiQ" eventType="touchUpInside" id="RKJ-q6-ZaH"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.82207178176508688" green="0.85769848631327628" blue="0.93226481958762886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.89205153150000005" green="0.92211635889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstItem="qlC-xo-vch" firstAttribute="leading" secondItem="gta-P4-vgA" secondAttribute="trailing" constant="8" id="Alj-hG-ECR"/>
                                                                 <constraint firstItem="NGh-eX-BBN" firstAttribute="leading" secondItem="gta-P4-vgA" secondAttribute="trailing" constant="8" symbolic="YES" id="EaO-LA-9qJ"/>
@@ -124,10 +127,10 @@
                                                         <constraint firstAttribute="bottom" secondItem="mfS-UG-Glb" secondAttribute="bottom" id="xC3-5O-NfP"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.89205153150000005" green="0.92211635889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.82207178179999996" green="0.85769848630000001" blue="0.93226481959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <connections>
-                                                    <outlet property="favoriteButton" destination="1X1-nh-koz" id="lDk-uI-QAZ"/>
+                                                    <outlet property="favoriteButton" destination="1X1-nh-koz" id="UIn-NI-CNW"/>
                                                     <outlet property="imageView" destination="gta-P4-vgA" id="ijB-Ab-8TQ"/>
                                                     <outlet property="placeImageView" destination="gta-P4-vgA" id="CP2-os-O3f"/>
                                                     <outlet property="placeName" destination="7yS-dC-aop" id="05e-Tp-aAl"/>

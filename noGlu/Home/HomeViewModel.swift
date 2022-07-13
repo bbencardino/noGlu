@@ -37,12 +37,14 @@ final class HomeViewModel {
 
     // MARK: - Cell View Model
     func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
-        return ResultCellViewModel(place: places[index])
+        return ResultCellViewModel(place: places[index],
+                                   userDefaults: userDefaults)
     }
 
     // MARK: - Place Details
     func makePlaceDetailsViewModel(at index: Int) -> PlaceViewModel {
-        return PlaceViewModel(place: places[index], userDefaults: userDefaults)
+        return PlaceViewModel(place: places[index],
+                              userDefaults: userDefaults)
     }
 
     func presentPlace(at index: Int) {
