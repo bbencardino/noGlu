@@ -23,6 +23,8 @@
 		5E3390282874BE560064FFF4 /* PlacesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390272874BE560064FFF4 /* PlacesAPITests.swift */; };
 		5E33902A2874C0820064FFF4 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390292874C0820064FFF4 /* MockNetwork.swift */; };
 		5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85423F28783D6800B2584B /* PlacesJSON.swift */; };
+		5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */; };
+		5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */; };
 		5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */; };
 		5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */; };
 		5EA8D4C0286C82BE00AE85E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8D4BF286C82BE00AE85E7 /* HomeViewController.swift */; };
@@ -64,6 +66,8 @@
 		5E3390272874BE560064FFF4 /* PlacesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPITests.swift; sourceTree = "<group>"; };
 		5E3390292874C0820064FFF4 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		5E85423F28783D6800B2584B /* PlacesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesJSON.swift; sourceTree = "<group>"; };
+		5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDefaults.swift; sourceTree = "<group>"; };
+		5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
 		5EA8D4B8286C82BE00AE85E7 /* noGlu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noGlu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		5E2FE9B128743C9400CA6F6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5E9A66AC287DE90C00982383 /* Database */,
 				5E2FE9C62874877100CA6F6F /* Network */,
 				5E2FE9BC287456CC00CA6F6F /* Error */,
 				5E2FE9B72874408200CA6F6F /* Response */,
@@ -186,6 +191,23 @@
 				5E3390272874BE560064FFF4 /* PlacesAPITests.swift */,
 			);
 			path = PlacesAPI;
+			sourceTree = "<group>";
+		};
+		5E9A66AC287DE90C00982383 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5E9A66AD287DE91400982383 /* User Defaults */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5E9A66AD287DE91400982383 /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */,
+				5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */,
+			);
+			path = "User Defaults";
 			sourceTree = "<group>";
 		};
 		5EA8D4AF286C82BD00AE85E7 = {
@@ -418,6 +440,8 @@
 				5E2FE9B92874409400CA6F6F /* Place.swift in Sources */,
 				5E330CAE287CCA3B0083EEB3 /* PlaceViewController.swift in Sources */,
 				5E2FE9CA28748AE000CA6F6F /* PlacesProtocol.swift in Sources */,
+				5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */,
+				5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */,
 				5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */,
 				5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */,
 				5E30A91B287D89BC001F1FBD /* PlaceViewModel.swift in Sources */,

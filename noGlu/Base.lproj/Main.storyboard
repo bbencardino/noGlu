@@ -65,10 +65,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlC-xo-vch">
-                                                                    <rect key="frame" x="127.99999999999999" y="103.33333333333333" width="240.66666666666663" height="46.666666666666671"/>
+                                                                    <rect key="frame" x="128" y="103.33333333333333" width="231" height="46.666666666666671"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-F3-q2b">
-                                                                            <rect key="frame" x="82" y="13.333333333333341" width="77" height="20.333333333333329"/>
+                                                                            <rect key="frame" x="77" y="13.333333333333341" width="77" height="20.333333333333329"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="££" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-4J-o6x">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="20.333333333333332"/>
@@ -91,10 +91,13 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X1-nh-koz">
-                                                                    <rect key="frame" x="368.66666666666669" y="107.33333333333333" width="45.333333333333314" height="30.666666666666671"/>
+                                                                    <rect key="frame" x="359" y="100.33333333333333" width="55" height="37.666666666666671"/>
                                                                     <color key="tintColor" red="0.64009718530000004" green="0.1967098219" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                                                    </buttonConfiguration>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.82207178176508688" green="0.85769848631327628" blue="0.93226481958762886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -314,7 +317,6 @@
     <resources>
         <image name="coffee-cake" width="612" height="447"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="noGluKipferl" width="720" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

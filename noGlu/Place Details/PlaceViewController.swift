@@ -13,6 +13,7 @@ final class PlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePlaceDetails()
+        saveFavorite()
     }
 
     @IBAction func markFavorite(_ sender: UIButton) {
@@ -20,15 +21,23 @@ final class PlaceViewController: UIViewController {
         let heartFill = UIImage(systemName: "heart.fill")
         let heart = UIImage(systemName: "heart")
 
-        if sender.imageView?.image == heart {
+        if sender.currentImage == heart {
             sender.setImage(heartFill, for: .normal)
+            viewModel.markFavoritePlace(true)
         } else {
             sender.setImage(heart, for: .normal)
+            viewModel.markFavoritePlace(false)
         }
     }
 
     private func configurePlaceDetails() {
         name.text = viewModel.placeName
         address.text = viewModel.placeAddress
+    }
+
+    private func saveFavorite() {
+        let imageName = viewModel.isFavoritePlace ? "heart.fill" : "heart"
+        favoriteButton.setImage(UIImage(systemName: imageName),
+                                    for: .normal)
     }
 }

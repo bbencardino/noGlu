@@ -18,17 +18,12 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         dismissKeyboard()
-        searchBar.delegate = searchBarDelegate
-        resultTableView.dataSource = resultDataSource
-        resultTableView.delegate = resultDelegate
-        viewModel.reloadView = resultTableView.reloadData
-        viewModel.performNavigation = performNavigation
+        configureView()
     }
 
     // MARK: - Reachability
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         setReachability()
     }
 
@@ -76,6 +71,14 @@ final class HomeViewController: UIViewController {
 
     func performNavigation(index: Int) {
         performSegue(withIdentifier: "toTheDetails", sender: index)
+    }
+
+    private func configureView() {
+        searchBar.delegate = searchBarDelegate
+        resultTableView.dataSource = resultDataSource
+        resultTableView.delegate = resultDelegate
+        viewModel.reloadView = resultTableView.reloadData
+        viewModel.performNavigation = performNavigation
     }
 }
 

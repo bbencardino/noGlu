@@ -3,13 +3,16 @@ import Foundation
 final class HomeViewModel {
 
     private let placesService: PlacesProtocol
+    private let userDefaults: UserDefaultsProtocol
     var places: [Place] = []
     var reloadView: (() -> Void)?
     var performNavigation: ((Int) -> Void)?
     var place: Int?
 
-    init(service: PlacesProtocol = PlacesAPI(network: Network())) {
+    init(service: PlacesProtocol = PlacesAPI(network: Network()),
+         userDefaults: UserDefaultsProtocol = UserDataDefaults()) {
         self.placesService = service
+        self.userDefaults = userDefaults
     }
 
     func searchForPlaces(location: String, completion: @escaping (Result<Void, ServiceError>) -> Void) {
@@ -39,12 +42,10 @@ final class HomeViewModel {
 
     // MARK: - Place Details
     func makePlaceDetailsViewModel(at index: Int) -> PlaceViewModel {
-        return PlaceViewModel(place: places[index])
+        return PlaceViewModel(place: places[index], userDefaults: userDefaults)
     }
 
     func presentPlace(at index: Int) {
         performNavigation?(index)
     }
-
-    // try to make only one func - using generics
 }
