@@ -7,10 +7,14 @@ final class HomeViewModel {
     private let database: Database
 
     var places: [Place] = []
+    var place: Int?
+
+    // Helper functions
     var reloadView: (() -> Void)?
     var presentAlert: ((String) -> Void)?
     var performNavigation: ((Int) -> Void)?
-    var place: Int?
+    var startAnimatingActivityView: ((Bool) -> Void)?
+    var stopAnimatingActivityView: (() -> Void)?
 
     init(service: PlacesProtocol = PlacesAPI(network: Network()),
          userDefaults: UserDefaultsProtocol = UserDataDefaults(),
