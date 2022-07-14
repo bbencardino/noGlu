@@ -77,6 +77,9 @@
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="markFavoritePlace:" destination="hqd-ZV-uH9" eventType="touchUpInside" id="xRH-w9-Tuf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89205153150000005" green="0.92211635889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
