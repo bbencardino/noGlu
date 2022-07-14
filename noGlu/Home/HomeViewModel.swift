@@ -49,7 +49,8 @@ final class HomeViewModel {
     // MARK: - Place Details
     func makePlaceDetailsViewModel(at index: Int) -> PlaceViewModel {
         return PlaceViewModel(place: places[index],
-                              userDefaults: userDefaults)
+                              userDefaults: userDefaults,
+                              database: database)
     }
 
     func presentPlace(at index: Int) {

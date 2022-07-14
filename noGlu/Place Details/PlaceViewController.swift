@@ -5,7 +5,7 @@ final class PlaceViewController: UIViewController {
     var viewModel: PlaceViewModel!
 
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -25,6 +25,7 @@ final class PlaceViewController: UIViewController {
     private func configurePlaceDetails() {
         name.text = viewModel.placeName
         address.text = viewModel.placeAddress
+        imageView.image = viewModel.image()
     }
 
     private func changeButtonImage() {
