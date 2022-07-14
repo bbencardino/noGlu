@@ -3,7 +3,7 @@ import Foundation
 struct PhotosAPI: PhotosProtocol {
 
     private let network: Network
-    private let key = "AIzaSyC7XWt_9ElNUgyuozZu7XOLH5URT5cSCzY"
+    private let key = ""
     private let baseStering = "https://maps.googleapis.com/maps/api/place/photo?"
 
     init(network: Network) {

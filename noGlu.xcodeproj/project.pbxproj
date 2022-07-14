@@ -28,7 +28,6 @@
 		5E9A66B3287F3A5200982383 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B2287F3A5200982383 /* Photo.swift */; };
 		5E9A66B6287F3D0200982383 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B5287F3D0200982383 /* PhotosAPI.swift */; };
 		5E9A66B8287F41D100982383 /* PhotosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B7287F41D100982383 /* PhotosProtocol.swift */; };
-		5E9A66BB28803FB800982383 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66BA28803FB800982383 /* Image.swift */; };
 		5E9A66BD2880401300982383 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66BC2880401300982383 /* CoreDataStack.swift */; };
 		5E9A66BF288040E800982383 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66BE288040E800982383 /* CoreDataManager.swift */; };
 		5E9A66C1288041F400982383 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66C0288041F400982383 /* Database.swift */; };
@@ -78,7 +77,6 @@
 		5E9A66B2287F3A5200982383 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5E9A66B5287F3D0200982383 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 		5E9A66B7287F41D100982383 /* PhotosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocol.swift; sourceTree = "<group>"; };
-		5E9A66BA28803FB800982383 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5E9A66BC2880401300982383 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5E9A66BE288040E800982383 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5E9A66C0288041F400982383 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				5EA8D4C4286C82BE00AE85E7 /* noGlu.xcdatamodeld */,
-				5E9A66BA28803FB800982383 /* Image.swift */,
 				5E9A66BC2880401300982383 /* CoreDataStack.swift */,
 				5E9A66BE288040E800982383 /* CoreDataManager.swift */,
 				5E9A66C0288041F400982383 /* Database.swift */,
@@ -483,7 +480,6 @@
 				5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */,
 				5E9A66B3287F3A5200982383 /* Photo.swift in Sources */,
 				5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */,
-				5E9A66BB28803FB800982383 /* Image.swift in Sources */,
 				5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */,
 				5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */,
 				5E30A91B287D89BC001F1FBD /* PlaceViewModel.swift in Sources */,

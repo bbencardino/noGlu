@@ -4,6 +4,7 @@ final class HomeViewModel {
 
     private let placesService: PlacesProtocol
     private let userDefaults: UserDefaultsProtocol
+    private let database: Database
 
     var places: [Place] = []
     var reloadView: (() -> Void)?
@@ -11,9 +12,11 @@ final class HomeViewModel {
     var place: Int?
 
     init(service: PlacesProtocol = PlacesAPI(network: Network()),
-         userDefaults: UserDefaultsProtocol = UserDataDefaults()) {
+         userDefaults: UserDefaultsProtocol = UserDataDefaults(),
+         database: Database = CoreDataManager()) {
         self.placesService = service
         self.userDefaults = userDefaults
+        self.database = database
     }
 
     func searchForPlaces(location: String, completion: @escaping (Result<Void, ServiceError>) -> Void) {
@@ -39,7 +42,8 @@ final class HomeViewModel {
     // MARK: - Cell View Model
     func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
         return ResultCellViewModel(place: places[index],
-                                   userDefaults: userDefaults)
+                                   userDefaults: userDefaults,
+                                   database: database)
     }
 
     // MARK: - Place Details
