@@ -24,6 +24,7 @@
 		5E33902A2874C0820064FFF4 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390292874C0820064FFF4 /* MockNetwork.swift */; };
 		5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85423F28783D6800B2584B /* PlacesJSON.swift */; };
 		5E8B39E22880A86100EF2D09 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E8B39E12880A86100EF2D09 /* ResultTableViewCell.xib */; };
+		5E8B39E72880B1B700EF2D09 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8B39E62880B1B700EF2D09 /* Alert.swift */; };
 		5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */; };
 		5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */; };
 		5E9A66B3287F3A5200982383 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B2287F3A5200982383 /* Photo.swift */; };
@@ -74,6 +75,7 @@
 		5E3390292874C0820064FFF4 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		5E85423F28783D6800B2584B /* PlacesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesJSON.swift; sourceTree = "<group>"; };
 		5E8B39E12880A86100EF2D09 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		5E8B39E62880B1B700EF2D09 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDefaults.swift; sourceTree = "<group>"; };
 		5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
 		5E9A66B2287F3A5200982383 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -219,6 +221,14 @@
 			path = "Result Table View Cell";
 			sourceTree = "<group>";
 		};
+		5E8B39E52880B1A100EF2D09 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5E8B39E62880B1B700EF2D09 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		5E9A66AC287DE90C00982383 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,9 +288,10 @@
 		5EA8D4BA286C82BE00AE85E7 /* noGlu */ = {
 			isa = PBXGroup;
 			children = (
-				5EEC36012878ABC4005C927B /* Networking */,
 				5EA8D4BB286C82BE00AE85E7 /* AppDelegate.swift */,
 				5EA8D4BD286C82BE00AE85E7 /* SceneDelegate.swift */,
+				5E8B39E52880B1A100EF2D09 /* Alert */,
+				5EEC36012878ABC4005C927B /* Networking */,
 				5EABF02D286DFE0A0005494C /* Components */,
 				5E330CAC287CC8A50083EEB3 /* Place Details */,
 				5EABF02A286DCF970005494C /* Home */,
@@ -494,6 +505,7 @@
 				5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */,
 				5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */,
 				5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */,
+				5E8B39E72880B1B700EF2D09 /* Alert.swift in Sources */,
 				5E30A91B287D89BC001F1FBD /* PlaceViewModel.swift in Sources */,
 				5E2FE9C8287487A300CA6F6F /* Network.swift in Sources */,
 				5EEC36052879A121005C927B /* ResultCellViewModel.swift in Sources */,

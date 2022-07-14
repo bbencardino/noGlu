@@ -9,7 +9,18 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.searchForPlaces(location: searchBar.text!) { _ in }
-        searchBar.resignFirstResponder()
+        viewModel.searchForPlaces(location: searchBar.text!) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case.success:
+                    searchBar.resignFirstResponder()
+                case .failure(let error):
+                    searchBar.resignFirstResponder()
+                    if let presentAlert = self?.viewModel.presentAlert {
+                        presentAlert(error.localizedDescription)
+                    }
+                }
+            }
+        }
     }
 }
