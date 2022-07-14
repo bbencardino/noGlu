@@ -2,6 +2,7 @@ import UIKit
 
 final class ResultTableViewCell: UITableViewCell {
 
+    static let identifier = "resultCell"
     var viewModel: ResultCellViewModel! {
         didSet {
             updateView()

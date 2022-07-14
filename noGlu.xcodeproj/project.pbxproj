@@ -23,6 +23,7 @@
 		5E3390282874BE560064FFF4 /* PlacesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390272874BE560064FFF4 /* PlacesAPITests.swift */; };
 		5E33902A2874C0820064FFF4 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3390292874C0820064FFF4 /* MockNetwork.swift */; };
 		5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85423F28783D6800B2584B /* PlacesJSON.swift */; };
+		5E8B39E22880A86100EF2D09 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E8B39E12880A86100EF2D09 /* ResultTableViewCell.xib */; };
 		5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */; };
 		5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */; };
 		5E9A66B3287F3A5200982383 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A66B2287F3A5200982383 /* Photo.swift */; };
@@ -72,6 +73,7 @@
 		5E3390272874BE560064FFF4 /* PlacesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPITests.swift; sourceTree = "<group>"; };
 		5E3390292874C0820064FFF4 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		5E85423F28783D6800B2584B /* PlacesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesJSON.swift; sourceTree = "<group>"; };
+		5E8B39E12880A86100EF2D09 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		5E9A66AE287DEA7900982383 /* UserDataDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDefaults.swift; sourceTree = "<group>"; };
 		5E9A66B0287DEAE400982383 /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
 		5E9A66B2287F3A5200982383 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -207,6 +209,16 @@
 			path = PlacesAPI;
 			sourceTree = "<group>";
 		};
+		5E8B39E02880A7EF00EF2D09 /* Result Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */,
+				5EEC36042879A121005C927B /* ResultCellViewModel.swift */,
+				5E8B39E12880A86100EF2D09 /* ResultTableViewCell.xib */,
+			);
+			path = "Result Table View Cell";
+			sourceTree = "<group>";
+		};
 		5E9A66AC287DE90C00982383 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,7 +315,8 @@
 		5EABF02D286DFE0A0005494C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5ED5026A286E181200144D86 /* Table View */,
+				5E8B39E02880A7EF00EF2D09 /* Result Table View Cell */,
+				5ED5026A286E181200144D86 /* Result Table View */,
 				5EABF02E286DFE140005494C /* Search Bar */,
 			);
 			path = Components;
@@ -317,15 +330,13 @@
 			path = "Search Bar";
 			sourceTree = "<group>";
 		};
-		5ED5026A286E181200144D86 /* Table View */ = {
+		5ED5026A286E181200144D86 /* Result Table View */ = {
 			isa = PBXGroup;
 			children = (
 				5ED5026B286E184D00144D86 /* ResultDataSource.swift */,
-				5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */,
-				5EEC36042879A121005C927B /* ResultCellViewModel.swift */,
 				5E30A91C287D8E6D001F1FBD /* ResultDelegate.swift */,
 			);
-			path = "Table View";
+			path = "Result Table View";
 			sourceTree = "<group>";
 		};
 		5EEC36012878ABC4005C927B /* Networking */ = {
@@ -421,6 +432,7 @@
 			files = (
 				5EA8D4CB286C82C100AE85E7 /* LaunchScreen.storyboard in Resources */,
 				5EA8D4C8286C82C100AE85E7 /* Assets.xcassets in Resources */,
+				5E8B39E22880A86100EF2D09 /* ResultTableViewCell.xib in Resources */,
 				5EA8D4C3286C82BE00AE85E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
