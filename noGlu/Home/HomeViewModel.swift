@@ -4,6 +4,7 @@ final class HomeViewModel {
 
     private let placesService: PlacesProtocol
     private let userDefaults: UserDefaultsProtocol
+
     var places: [Place] = []
     var reloadView: (() -> Void)?
     var performNavigation: ((Int) -> Void)?

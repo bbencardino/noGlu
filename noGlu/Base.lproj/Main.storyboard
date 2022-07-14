@@ -131,7 +131,6 @@
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <connections>
                                                     <outlet property="favoriteButton" destination="1X1-nh-koz" id="UIn-NI-CNW"/>
-                                                    <outlet property="imageView" destination="gta-P4-vgA" id="ijB-Ab-8TQ"/>
                                                     <outlet property="placeImageView" destination="gta-P4-vgA" id="CP2-os-O3f"/>
                                                     <outlet property="placeName" destination="7yS-dC-aop" id="05e-Tp-aAl"/>
                                                     <outlet property="placeView" destination="mfS-UG-Glb" id="mCk-Xu-XK3"/>

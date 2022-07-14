@@ -1,11 +1,16 @@
-import Foundation
+import UIKit
 
 struct ResultCellViewModel {
+
     private let place: Place
+    private let service: PhotosProtocol
     private let userDefaults: UserDefaultsProtocol
 
-    init(place: Place, userDefaults: UserDefaultsProtocol) {
+    init(place: Place,
+         service: PhotosProtocol = PhotosAPI(network: Network()),
+         userDefaults: UserDefaultsProtocol) {
         self.place = place
+        self.service = service
         self.userDefaults = userDefaults
     }
 
@@ -28,5 +33,27 @@ struct ResultCellViewModel {
 
     private func saveFavoritePlace() -> Bool {
         userDefaults.readBool(forKey: placeName)
+    }
+
+    // MARK: - Photos
+
+    private func fetchPhotoFromAPI(completion: @escaping (Data) -> Void) {
+
+        guard let firstPhoto = place.photos.first else { fatalError("Fatal Error: There's no photo") }
+        service.getImageFrom(reference: firstPhoto.photoReference) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+                completion(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func image(completion: @escaping (UIImage?) -> Void) {
+        fetchPhotoFromAPI { data in
+            completion(UIImage(data: data))
+        }
     }
 }

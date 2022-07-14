@@ -10,11 +10,17 @@ final class Network: NetworkProtocol {
             completion(.failure(.wrongURL))
             return
         }
-        let dataTask = session.dataTask(with: url) { data, _, _ in
+        let dataTask = session.dataTask(with: url) { data, response, _ in
             guard let data = data else {
                 completion(.failure(.noData))
                 return
             }
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200 else {
+                completion(.failure(.noData))
+                return
+            }
+
             completion(.success(data))
         }
         dataTask.resume()
