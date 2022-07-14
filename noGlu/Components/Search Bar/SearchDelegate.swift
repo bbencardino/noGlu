@@ -10,6 +10,9 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         viewModel.searchForPlaces(location: searchBar.text!) { [weak self] result in
+
+            if let startAnimating = self?.viewModel.startAnimatingActivityView { startAnimating(true) }
+
             DispatchQueue.main.async {
                 switch result {
                 case.success:

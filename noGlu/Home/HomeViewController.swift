@@ -10,6 +10,7 @@ final class HomeViewController: UIViewController {
     lazy var resultDataSource = ResultDataSource(viewModel: viewModel)
     lazy var resultDelegate = ResultDelegate(viewModel: viewModel)
 
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var noConnectionView: UIView!
     @IBOutlet weak var homeView: UIView!
     private let reachability = try? Reachability()
@@ -69,10 +70,11 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    func performNavigation(index: Int) {
+    private func performNavigation(index: Int) {
         performSegue(withIdentifier: "toTheDetails", sender: index)
     }
 
+    // MARK: Helper methods
     private func configureView() {
         searchBar.delegate = searchBarDelegate
         resultTableView.dataSource = resultDataSource
@@ -80,13 +82,20 @@ final class HomeViewController: UIViewController {
         viewModel.reloadView = resultTableView.reloadData
         viewModel.performNavigation = performNavigation
         viewModel.presentAlert = self.presentAlert
+        viewModel.startAnimatingActivityView = self.startAnimatingActivityView
+        viewModel.stopAnimatingActivityView = activityView.stopAnimating
 
         let nib = UINib(nibName: "ResultTableViewCell", bundle: nil)
         resultTableView.register(nib, forCellReuseIdentifier: ResultTableViewCell.identifier)
     }
 
-    func presentAlert(with message: String) {
+    private func presentAlert(with message: String) {
         Alert.basicAlert(title: "", message: message, viewController: self)
+    }
+
+    private func startAnimatingActivityView(_ visibility: Bool) {
+        activityView.isHidden = !visibility
+        activityView.startAnimating()
     }
 }
 
