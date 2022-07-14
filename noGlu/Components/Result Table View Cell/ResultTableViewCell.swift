@@ -2,17 +2,19 @@ import UIKit
 
 final class ResultTableViewCell: UITableViewCell {
 
+    static let identifier = "resultCell"
     var viewModel: ResultCellViewModel! {
         didSet {
             updateView()
+            updateImage()
             changeButtonImage()
         }
     }
 
     @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var placeImageView: UIImageView!
-    @IBOutlet weak var placeName: UILabel!
 
+    @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var priceRange: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -44,5 +46,15 @@ final class ResultTableViewCell: UITableViewCell {
         rating.text = viewModel.rating
         placeName.text = viewModel.placeName
         priceRange.text = viewModel.priceRange
+    }
+
+    private func updateImage() {
+        DispatchQueue.global().async { [weak self] in
+            self?.viewModel.image { image in
+                DispatchQueue.main.async {
+                    self?.placeImageView.image = image
+                }
+            }
+        }
     }
 }
