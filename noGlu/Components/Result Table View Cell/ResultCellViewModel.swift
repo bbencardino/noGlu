@@ -22,6 +22,7 @@ struct ResultCellViewModel {
     var placeName: String { place.name }
     var priceRange: String { priceInCurrency(currency: "£") }
     var isFavoritePlace: Bool { saveFavoritePlace() }
+    var presentAlert: ((String) -> Void)?
 
     private var photoReference: String {
         guard let firstPhoto = place.photos.first else { fatalError("Fatal Error: There's no photo") }
@@ -60,14 +61,17 @@ struct ResultCellViewModel {
     private func fetchPhotoFromAPI(completion: @escaping (Data) -> Void) {
 
         service.getImageFrom(reference: photoReference) { result in
-            switch result {
-            case .success(let data):
-                print(data)
-                database.createImage(blob: data,
-                                     reference: photoReference)
-                completion(data)
-            case .failure(let error):
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    database.createImage(blob: data,
+                                         reference: photoReference)
+                    completion(data)
+                case .failure(let error):
+                    if let presentAlert = presentAlert {
+                        presentAlert(error.localizedDescription)
+                    }
+                }
             }
         }
     }

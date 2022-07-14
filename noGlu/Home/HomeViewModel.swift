@@ -8,6 +8,7 @@ final class HomeViewModel {
 
     var places: [Place] = []
     var reloadView: (() -> Void)?
+    var presentAlert: ((String) -> Void)?
     var performNavigation: ((Int) -> Void)?
     var place: Int?
 
@@ -41,9 +42,11 @@ final class HomeViewModel {
 
     // MARK: - Cell View Model
     func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
-        return ResultCellViewModel(place: places[index],
-                                   userDefaults: userDefaults,
-                                   database: database)
+        var viewModel = ResultCellViewModel(place: places[index],
+                                            userDefaults: userDefaults,
+                                            database: database)
+        viewModel.presentAlert = presentAlert
+        return viewModel
     }
 
     // MARK: - Place Details

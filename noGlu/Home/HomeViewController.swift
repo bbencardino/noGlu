@@ -79,9 +79,14 @@ final class HomeViewController: UIViewController {
         resultTableView.delegate = resultDelegate
         viewModel.reloadView = resultTableView.reloadData
         viewModel.performNavigation = performNavigation
+        viewModel.presentAlert = self.presentAlert
 
         let nib = UINib(nibName: "ResultTableViewCell", bundle: nil)
         resultTableView.register(nib, forCellReuseIdentifier: ResultTableViewCell.identifier)
+    }
+
+    func presentAlert(with message: String) {
+        Alert.basicAlert(title: "", message: message, viewController: self)
     }
 }
 

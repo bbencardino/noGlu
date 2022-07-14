@@ -7,7 +7,7 @@ final class Network: NetworkProtocol {
     func taskForGETRequest(endpoint: String,
                            completion: @escaping (Result<Data, ServiceError>) -> Void) {
         guard let url = URL(string: endpoint) else {
-            completion(.failure(.wrongURL))
+            completion(.failure(.badFormattedString))
             return
         }
         let dataTask = session.dataTask(with: url) { data, _, _ in
