@@ -5,7 +5,7 @@ final class MockNetwork: NetworkProtocol {
 
     func taskForGETRequest(endpoint: String, completion: @escaping (Result<Data, ServiceError>) -> Void) {
 
-        let fakeJson = PlacesJSON.placesJSON
+        //let fakeJson = PlacesJSON.placesJSON
         let min =
 """
 {

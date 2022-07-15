@@ -6,8 +6,8 @@ final class HomeViewModel {
     private let userDefaults: UserDefaultsProtocol
     private let database: Database
 
-    var places: [Place] = []
-    var place: Int?
+    private var places: [Place] = []
+    private var place: Int?
 
     // Helper functions
     var reloadView: (() -> Void)?
@@ -32,6 +32,7 @@ final class HomeViewModel {
                 DispatchQueue.main.async {
                     self?.places = places
                     self?.reloadView?()
+                    self?.presentAlertForEmptyPlaces()
                 }
                 completion(.success(()))
 
@@ -64,5 +65,11 @@ final class HomeViewModel {
 
     func presentPlace(at index: Int) {
         performNavigation?(index)
+    }
+
+    func presentAlertForEmptyPlaces() {
+        if places.isEmpty {
+            presentAlert?("There're no gluten free places for this location 😔")
+        }
     }
 }

@@ -45,6 +45,7 @@
 		5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */; };
 		5EEC36032878AC54005C927B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36022878AC54005C927B /* Reachability.swift */; };
 		5EEC36052879A121005C927B /* ResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC36042879A121005C927B /* ResultCellViewModel.swift */; };
+		5EEF6D802881747200F4FA4C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF6D7F2881747200F4FA4C /* Auth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		5ED5026D286E408E00144D86 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5EEC36022878AC54005C927B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5EEC36042879A121005C927B /* ResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellViewModel.swift; sourceTree = "<group>"; };
+		5EEF6D7F2881747200F4FA4C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				5E2FE9BF287471AF00CA6F6F /* NetworkProtocol.swift */,
 				5E2FE9C7287487A300CA6F6F /* Network.swift */,
+				5EEF6D7F2881747200F4FA4C /* Auth.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				5E9A66B6287F3D0200982383 /* PhotosAPI.swift in Sources */,
 				5E30A91D287D8E6D001F1FBD /* ResultDelegate.swift in Sources */,
 				5E9A66BD2880401300982383 /* CoreDataStack.swift in Sources */,
+				5EEF6D802881747200F4FA4C /* Auth.swift in Sources */,
 				5E2FE9C0287471AF00CA6F6F /* NetworkProtocol.swift in Sources */,
 				5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */,
 				5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */,
