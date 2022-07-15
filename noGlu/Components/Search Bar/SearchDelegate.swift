@@ -9,19 +9,21 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.startAnimatingActivityView?(true)
+
         viewModel.searchForPlaces(location: searchBar.text!) { [weak self] result in
-
-            if let startAnimating = self?.viewModel.startAnimatingActivityView { startAnimating(true) }
-
-            DispatchQueue.main.async {
-                switch result {
-                case.success:
+            switch result {
+            case.success:
+                DispatchQueue.main.async {
                     searchBar.resignFirstResponder()
-                case .failure(let error):
+                    self?.viewModel.stopAnimatingActivityView?()
+                }
+
+            case .failure(let error):
+                DispatchQueue.main.async {
                     searchBar.resignFirstResponder()
-                    if let presentAlert = self?.viewModel.presentAlert {
-                        presentAlert(error.localizedDescription)
-                    }
+                    self?.viewModel.stopAnimatingActivityView?()
+                    self?.viewModel.presentAlert?(error.localizedDescription)
                 }
             }
         }

@@ -46,9 +46,7 @@ struct ResultCellViewModel {
     }
 
     // MARK: - Photos
-
     func image(completion: @escaping (UIImage?) -> Void) {
-
         if let data = database.fetchImage(with: photoReference) {
             completion(UIImage(data: data))
         } else {
@@ -59,7 +57,6 @@ struct ResultCellViewModel {
     }
 
     private func fetchPhotoFromAPI(completion: @escaping (Data) -> Void) {
-
         service.getImageFrom(reference: photoReference) { result in
             DispatchQueue.main.async {
                 switch result {
