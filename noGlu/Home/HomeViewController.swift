@@ -2,18 +2,19 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var resultTableView: UITableView!
-
-    private let viewModel = HomeViewModel()
     lazy var searchBarDelegate = SearchDelegate(viewModel: viewModel)
     lazy var resultDataSource = ResultDataSource(viewModel: viewModel)
     lazy var resultDelegate = ResultDelegate(viewModel: viewModel)
 
+    private let viewModel = HomeViewModel()
+    private let reachability = try? Reachability()
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultTableView: UITableView!
+
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var noConnectionView: UIView!
     @IBOutlet weak var homeView: UIView!
-    private let reachability = try? Reachability()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +75,7 @@ final class HomeViewController: UIViewController {
         performSegue(withIdentifier: "toTheDetails", sender: index)
     }
 
-    // MARK: Helper methods
+    // MARK: - Helper methods
     private func configureView() {
         searchBar.delegate = searchBarDelegate
         resultTableView.dataSource = resultDataSource

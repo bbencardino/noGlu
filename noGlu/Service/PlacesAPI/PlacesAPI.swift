@@ -2,7 +2,7 @@ import Foundation
 
 final class PlacesAPI: PlacesProtocol {
 
-    private let apiKey = ""
+    private let apiKey = "API_KEY"
     private let endpoint = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=glutenfreein"
 
     private let network: NetworkProtocol
@@ -14,9 +14,18 @@ final class PlacesAPI: PlacesProtocol {
     func getPlacesFromAPI(location: String,
                           completion: @escaping (Result<[Place], ServiceError>) -> Void) {
 
-        let json = PlacesJSON.placesJSON
-        let places = parsePlaces(data: Data(json.utf8))
-        completion(.success(places))
+        let stringBase = endpoint + location + "&key=\(apiKey)"
+        network.taskForGETRequest(endpoint: stringBase) { [weak self] result in
+            switch result {
+            case .success(let data):
+                guard let places = self?.parsePlaces(data: data) else {
+                    fatalError("Fatal Error: Place failed to parse.")
+                }
+                completion(.success(places))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 
     func parsePlaces(data: Data) -> [Place] {

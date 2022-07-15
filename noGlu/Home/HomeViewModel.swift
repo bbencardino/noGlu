@@ -25,15 +25,17 @@ final class HomeViewModel {
     }
 
     func searchForPlaces(location: String, completion: @escaping (Result<Void, ServiceError>) -> Void) {
-        placesService.getPlacesFromAPI(location: location) { [self] result in
+        placesService.getPlacesFromAPI(location: location) { [weak self] result in
+
             switch result {
             case .success(let places):
-                self.places = places
+                DispatchQueue.main.async {
+                    self?.places = places
+                    self?.reloadView?()
+                }
                 completion(.success(()))
-                print(places.count)
-                self.reloadView?()
+
             case .failure(let error):
-                print(error.localizedDescription)
                 completion(.failure(error))
             }
         }
