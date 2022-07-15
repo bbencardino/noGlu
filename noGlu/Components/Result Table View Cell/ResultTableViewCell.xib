@@ -119,6 +119,6 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="placeholder" width="860" height="800"/>
+        <image name="placeholder" width="286.5" height="266.5"/>
     </resources>
 </document>
