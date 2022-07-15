@@ -10,10 +10,16 @@ Created in 2022, noGlu is an app to find out gluten free safe places to who have
 
 With noGlu celiacs won’t have to worry about spending hours googling “where can I find gluten free near me”. 
 
+# How to use
+Search for a city that you want to find gluten free places. 
+Press the heart button to favourite or unfavourite the place.
+Press the place to see more details about it.
+
 ### Features
 
-- Google search
+- Google search API
 - Favourite places 
+- Reachability
 
 ### Architecture
 
@@ -21,7 +27,7 @@ With noGlu celiacs won’t have to worry about spending hours googling “where 
 
 ### Tests
 
-- Unit tests
+- Unit tests (Soon)
 
 ### Persistence
 
