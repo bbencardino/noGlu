@@ -19,7 +19,8 @@ final class PlacesAPI: PlacesProtocol {
             switch result {
             case .success(let data):
                 guard let places = self?.parsePlaces(data: data) else {
-                    fatalError("Fatal Error: Place failed to parse.")
+                    completion(.failure(.badFormattedString))
+                    return
                 }
                 completion(.success(places))
             case .failure(let error):

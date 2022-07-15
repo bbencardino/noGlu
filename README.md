@@ -12,7 +12,9 @@ With noGlu celiacs won’t have to worry about spending hours googling “where 
 
 # How to use
 Search for a city that you want to find gluten free places. 
+
 Press the heart button to favourite or unfavourite the place.
+
 Press the place to see more details about it.
 
 ### Features
@@ -20,6 +22,14 @@ Press the place to see more details about it.
 - Google search API
 - Favourite places 
 - Reachability
+
+### Required versions
+
+iOS 15+
+
+Swift 5+
+
+Xcode 13+
 
 ### Architecture
 

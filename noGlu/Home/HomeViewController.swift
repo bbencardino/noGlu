@@ -46,7 +46,7 @@ final class HomeViewController: UIViewController {
         do {
           try reachability?.startNotifier()
         } catch {
-          print("could not start reachability notifier")
+          debugPrint("could not start reachability notifier")
         }
     }
 
