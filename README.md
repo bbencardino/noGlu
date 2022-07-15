@@ -33,3 +33,9 @@ Press the place to see more details about it.
 
 - Core Data
 - UserDefaults
+
+### TODO
+
+- Search places automatically by current location
+- Unit Testing
+- Snapshot testing
