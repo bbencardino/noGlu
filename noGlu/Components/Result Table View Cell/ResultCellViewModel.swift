@@ -21,7 +21,7 @@ struct ResultCellViewModel {
     var rating: String { String(place.rating) }
     var placeName: String { place.name }
     var priceRange: String { priceInCurrency(currency: "£") }
-    var isFavoritePlace: Bool { saveFavoritePlace() }
+    var isFavoritePlace: Bool { database.isFavorite(place.id) }
     var presentAlert: ((String) -> Void)?
 
     private var photoReference: String {
@@ -38,11 +38,7 @@ struct ResultCellViewModel {
 
     // MARK: - Favourite place
     func markFavoritePlace(_ favorite: Bool) {
-        userDefaults.write(favorite, forKey: placeName)
-    }
-
-    private func saveFavoritePlace() -> Bool {
-        userDefaults.readBool(forKey: placeName)
+        database.setIsFavorite(favorite, id: place.id)
     }
 
     // MARK: - Photos
@@ -61,8 +57,7 @@ struct ResultCellViewModel {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
-                    database.createImage(blob: data,
-                                         reference: photoReference)
+                    database.createPlace(place, image: data)
                     completion(data)
                 case .failure(let error):
                     if let presentAlert = presentAlert {

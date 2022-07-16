@@ -1,7 +1,11 @@
 import Foundation
 
 protocol Database {
-    func createImage(blob: Data, reference: String)
+
+    var favoritePlaces: [PlaceMO] { get }
+    func createPlace(_ place: Place, image: Data)
     func fetchImage(with reference: String) -> Data?
-    var images: [Image]? { get set }
+    func fetchPlace(with id: String) -> PlaceMO?
+    func setIsFavorite(_ value: Bool, id: String)
+    func isFavorite(_ id: String) -> Bool
 }

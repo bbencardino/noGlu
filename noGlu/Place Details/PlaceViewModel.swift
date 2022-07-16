@@ -8,7 +8,14 @@ final class PlaceViewModel {
     private let database: Database
     var placeName: String { place.name }
     var placeAddress: String { place.address }
-    var isFavoritePlace: Bool { saveFavoritePlace() }
+    var isFavoritePlace: Bool { database.isFavorite(place.id) }
+
+    private var photoReference: String {
+        guard let firstPhoto = place.photos.first else {
+            fatalError("Fatal Error: There's no photo")
+        }
+        return firstPhoto.photoReference
+    }
 
     init(place: Place, userDefaults: UserDefaultsProtocol, database: Database) {
         self.place = place
@@ -18,19 +25,11 @@ final class PlaceViewModel {
 
     // MARK: - User defaults
     func markFavoritePlace(_ favorite: Bool) {
-        userDefaults.write(favorite, forKey: placeName)
-    }
-
-    private func saveFavoritePlace() -> Bool {
-        userDefaults.readBool(forKey: placeName)
+        database.setIsFavorite(favorite, id: place.id)
     }
 
     // MARK: - Core data
     func image() -> UIImage? {
-
-        guard let photoReference = place.photos.first?.photoReference else {
-            fatalError("Fatal Error: There're no photo")
-        }
         if let data = database.fetchImage(with: photoReference) {
             return UIImage(data: data)
         } else {

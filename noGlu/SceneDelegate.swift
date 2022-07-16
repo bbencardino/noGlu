@@ -10,9 +10,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if (scene as? UIWindowScene) != nil { return }
     }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        let coreDataManager = CoreDataManager()
-        coreDataManager.save()
-    }
 }
