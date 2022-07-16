@@ -8,7 +8,7 @@ final class PlaceViewModel {
     private let database: Database
     var placeName: String { place.name }
     var placeAddress: String { place.address }
-    var isFavoritePlace: Bool { saveFavoritePlace() }
+    var isFavoritePlace: Bool { database.isFavorite(place.id) }
 
     private var photoReference: String {
         guard let firstPhoto = place.photos.first else {
@@ -25,15 +25,7 @@ final class PlaceViewModel {
 
     // MARK: - User defaults
     func markFavoritePlace(_ favorite: Bool) {
-        userDefaults.write(favorite, forKey: placeName)
-        if let favPlace = database.fetchPlace(with: photoReference) {
-            favPlace.favorite = favorite
-            database.save()
-        }
-    }
-
-    private func saveFavoritePlace() -> Bool {
-        userDefaults.readBool(forKey: placeName)
+        database.setIsFavorite(favorite, id: place.id)
     }
 
     // MARK: - Core data

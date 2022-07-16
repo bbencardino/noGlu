@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0E886D2882D99E001799F4 /* FavoritePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0E886C2882D99E001799F4 /* FavoritePlaceViewController.swift */; };
+		5E1110BD2882DA9C0077BADA /* FavoritePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1110BC2882DA9C0077BADA /* FavoritePlaceViewModel.swift */; };
+		5E1110C02882DD4D0077BADA /* FavoritePlaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1110BF2882DD4D0077BADA /* FavoritePlaceDataSource.swift */; };
+		5E1110C22882DDD50077BADA /* FavoritePlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1110C12882DDD50077BADA /* FavoritePlaceTableViewCell.swift */; };
+		5E1110C52882DF1B0077BADA /* FavoritePlaceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1110C42882DF1B0077BADA /* FavoritePlaceCellViewModel.swift */; };
 		5E2FE9AD28743B1B00CA6F6F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9AC28743B1B00CA6F6F /* HomeViewModel.swift */; };
 		5E2FE9B028743B6E00CA6F6F /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9AF28743B6E00CA6F6F /* HomeViewModelTests.swift */; };
 		5E2FE9B628743DA200CA6F6F /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FE9B528743DA200CA6F6F /* PlacesAPI.swift */; };
@@ -59,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E0E886C2882D99E001799F4 /* FavoritePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceViewController.swift; sourceTree = "<group>"; };
+		5E1110BC2882DA9C0077BADA /* FavoritePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceViewModel.swift; sourceTree = "<group>"; };
+		5E1110BF2882DD4D0077BADA /* FavoritePlaceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceDataSource.swift; sourceTree = "<group>"; };
+		5E1110C12882DDD50077BADA /* FavoritePlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceTableViewCell.swift; sourceTree = "<group>"; };
+		5E1110C42882DF1B0077BADA /* FavoritePlaceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaceCellViewModel.swift; sourceTree = "<group>"; };
 		5E2FE9AC28743B1B00CA6F6F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5E2FE9AF28743B6E00CA6F6F /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		5E2FE9B528743DA200CA6F6F /* PlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
@@ -121,6 +131,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E1110BB2882DA2A0077BADA /* Favorite Places */ = {
+			isa = PBXGroup;
+			children = (
+				5E0E886C2882D99E001799F4 /* FavoritePlaceViewController.swift */,
+				5E1110BC2882DA9C0077BADA /* FavoritePlaceViewModel.swift */,
+			);
+			path = "Favorite Places";
+			sourceTree = "<group>";
+		};
+		5E1110BE2882DD150077BADA /* Favorite Places Table View */ = {
+			isa = PBXGroup;
+			children = (
+				5E1110BF2882DD4D0077BADA /* FavoritePlaceDataSource.swift */,
+			);
+			path = "Favorite Places Table View";
+			sourceTree = "<group>";
+		};
+		5E1110C32882DDE80077BADA /* Favorite Places Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E1110C12882DDD50077BADA /* FavoritePlaceTableViewCell.swift */,
+				5E1110C42882DF1B0077BADA /* FavoritePlaceCellViewModel.swift */,
+			);
+			path = "Favorite Places Table View Cell";
+			sourceTree = "<group>";
+		};
 		5E2FE9AE28743B4800CA6F6F /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +335,7 @@
 				5E330CAC287CC8A50083EEB3 /* Place Details */,
 				5EABF02A286DCF970005494C /* Home */,
 				5E2FE9B128743C9400CA6F6F /* Service */,
+				5E1110BB2882DA2A0077BADA /* Favorite Places */,
 				5EA8D4C1286C82BE00AE85E7 /* Main.storyboard */,
 				5EA8D4C7286C82C100AE85E7 /* Assets.xcassets */,
 				5EA8D4C9286C82C100AE85E7 /* LaunchScreen.storyboard */,
@@ -329,6 +366,8 @@
 		5EABF02D286DFE0A0005494C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5E1110C32882DDE80077BADA /* Favorite Places Table View Cell */,
+				5E1110BE2882DD150077BADA /* Favorite Places Table View */,
 				5E8B39E02880A7EF00EF2D09 /* Result Table View Cell */,
 				5ED5026A286E181200144D86 /* Result Table View */,
 				5EABF02E286DFE140005494C /* Search Bar */,
@@ -493,8 +532,11 @@
 				5EEF6D802881747200F4FA4C /* Auth.swift in Sources */,
 				5E2FE9C0287471AF00CA6F6F /* NetworkProtocol.swift in Sources */,
 				5EA8D4BC286C82BE00AE85E7 /* AppDelegate.swift in Sources */,
+				5E1110BD2882DA9C0077BADA /* FavoritePlaceViewModel.swift in Sources */,
 				5ED5026E286E408E00144D86 /* ResultTableViewCell.swift in Sources */,
 				5E2FE9AD28743B1B00CA6F6F /* HomeViewModel.swift in Sources */,
+				5E0E886D2882D99E001799F4 /* FavoritePlaceViewController.swift in Sources */,
+				5E1110C52882DF1B0077BADA /* FavoritePlaceCellViewModel.swift in Sources */,
 				5EABF02C286DCFF00005494C /* SearchDelegate.swift in Sources */,
 				5EA8D4BE286C82BE00AE85E7 /* SceneDelegate.swift in Sources */,
 				5EA8D4C6286C82BE00AE85E7 /* noGlu.xcdatamodeld in Sources */,
@@ -503,9 +545,11 @@
 				5E2FE9B628743DA200CA6F6F /* PlacesAPI.swift in Sources */,
 				5E2FE9B92874409400CA6F6F /* Place.swift in Sources */,
 				5E330CAE287CCA3B0083EEB3 /* PlaceViewController.swift in Sources */,
+				5E1110C02882DD4D0077BADA /* FavoritePlaceDataSource.swift in Sources */,
 				5E2FE9CA28748AE000CA6F6F /* PlacesProtocol.swift in Sources */,
 				5E9A66AF287DEA7900982383 /* UserDataDefaults.swift in Sources */,
 				5E9A66B3287F3A5200982383 /* Photo.swift in Sources */,
+				5E1110C22882DDD50077BADA /* FavoritePlaceTableViewCell.swift in Sources */,
 				5E9A66B1287DEAE400982383 /* UserDefaultsProtocol.swift in Sources */,
 				5E2FE9BE287456E700CA6F6F /* ServiceError.swift in Sources */,
 				5E85424028783D6800B2584B /* PlacesJSON.swift in Sources */,
