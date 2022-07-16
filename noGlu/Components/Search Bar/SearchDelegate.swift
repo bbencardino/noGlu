@@ -8,9 +8,18 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
         self.viewModel = viewModel
     }
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.startAnimatingActivityView?(true)
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        if let lastSearch = viewModel.getLastSearch() {
+            searchBar.text = lastSearch
+        }
+    }
 
+   
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.saveLastSearch(searchBar.text ?? "")
+
+        viewModel.startAnimatingActivityView?(true)
         viewModel.searchForPlaces(location: searchBar.text!) { [weak self] result in
             switch result {
             case.success:
@@ -27,5 +36,6 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
                 }
             }
         }
+        searchBar.text?.removeAll()
     }
 }

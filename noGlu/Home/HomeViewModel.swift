@@ -47,6 +47,16 @@ final class HomeViewModel {
         return places.count
     }
 
+    // MARK: - UserDefaults
+
+    func saveLastSearch(_ location: String) {
+        userDefaults.write(location, forKey: "lastLocation")
+    }
+
+    func getLastSearch() -> String? {
+        userDefaults.readString(forKey: "lastLocation")
+    }
+
     // MARK: - Cell View Model
     func makeResultCellViewModel(at index: Int) -> ResultCellViewModel {
         var viewModel = ResultCellViewModel(place: places[index],

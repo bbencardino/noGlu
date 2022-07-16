@@ -8,7 +8,7 @@ final class UserDataDefaults: UserDefaultsProtocol {
         userDefaults.set(value, forKey: key)
     }
 
-    func readBool(forKey key: String) -> Bool {
-        userDefaults.bool(forKey: key)
+    func readString(forKey key: String) -> String {
+        userDefaults.string(forKey: key) ?? ""
     }
 }
