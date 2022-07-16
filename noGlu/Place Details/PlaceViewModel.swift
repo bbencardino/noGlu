@@ -32,6 +32,7 @@ final class PlaceViewModel {
             fatalError("Fatal Error: There're no photo")
         }
         if let data = database.fetchImage(with: photoReference) {
+            
             return UIImage(data: data)
         } else {
             return UIImage(named: "placeholder")

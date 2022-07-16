@@ -1,7 +1,10 @@
 import Foundation
 
 protocol Database {
-    func createImage(blob: Data, reference: String)
+
+    var placesMO: [PlaceMO]? { get }
+    func createPlace(blob: Data, reference: String, name: String, favorite: Bool)
     func fetchImage(with reference: String) -> Data?
-    var images: [Image]? { get set }
+    func fetchPlace(with reference: String) -> PlaceMO?
+    func save()
 }

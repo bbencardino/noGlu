@@ -3,7 +3,7 @@ import CoreData
 struct CoreDataManager: Database {
 
     private let context: NSManagedObjectContext
-    var images: [Image]?
+    var placesMO: [PlaceMO]? { try? context.fetch(PlaceMO.fetchRequest())}
 
     init(context: NSManagedObjectContext = CoreDataStack.context) {
         self.context = context
@@ -11,19 +11,31 @@ struct CoreDataManager: Database {
 
     func fetchImage(with reference: String) -> Data? {
         do {
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PlaceMO")
             fetchRequest.predicate = NSPredicate(format: "reference == %@", reference)
-            return (try context.fetch(fetchRequest) as? [Image])?.first?.blob
+            return (try context.fetch(fetchRequest) as? [PlaceMO])?.first?.blob
         } catch {
             return nil
         }
     }
 
-    func createImage(blob: Data, reference: String) {
+    func fetchPlace(with reference: String) -> PlaceMO? {
+        do {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PlaceMO")
+            fetchRequest.predicate = NSPredicate(format: "reference == %@", reference)
+            return (try context.fetch(fetchRequest) as? [PlaceMO])?.first
+        } catch {
+            return nil
+        }
+    }
+
+    func createPlace(blob: Data, reference: String, name: String, favorite: Bool = false) {
         context.performAndWait {
-            let newImage = Image(context: context)
-            newImage.blob = blob
-            newImage.reference = reference
+            let newPlace = PlaceMO(context: context)
+            newPlace.blob = blob
+            newPlace.reference = reference
+            newPlace.name = name
+            newPlace.favorite = favorite
             save()
         }
     }

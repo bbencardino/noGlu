@@ -39,6 +39,12 @@ struct ResultCellViewModel {
     // MARK: - Favourite place
     func markFavoritePlace(_ favorite: Bool) {
         userDefaults.write(favorite, forKey: placeName)
+        if let favPlace = database.fetchPlace(with: photoReference) {
+            favPlace.favorite = favorite
+            database.save()
+//            print(favPlace.favorite)
+//            print(favPlace.name)
+        }
     }
 
     private func saveFavoritePlace() -> Bool {
@@ -61,8 +67,9 @@ struct ResultCellViewModel {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
-                    database.createImage(blob: data,
-                                         reference: photoReference)
+                    database.createPlace(blob: data,
+                                         reference: photoReference,
+                                         name: placeName, favorite: false)
                     completion(data)
                 case .failure(let error):
                     if let presentAlert = presentAlert {
