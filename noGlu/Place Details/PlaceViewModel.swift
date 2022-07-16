@@ -10,6 +10,13 @@ final class PlaceViewModel {
     var placeAddress: String { place.address }
     var isFavoritePlace: Bool { saveFavoritePlace() }
 
+    private var photoReference: String {
+        guard let firstPhoto = place.photos.first else {
+            fatalError("Fatal Error: There's no photo")
+        }
+        return firstPhoto.photoReference
+    }
+
     init(place: Place, userDefaults: UserDefaultsProtocol, database: Database) {
         self.place = place
         self.userDefaults = userDefaults
@@ -19,6 +26,10 @@ final class PlaceViewModel {
     // MARK: - User defaults
     func markFavoritePlace(_ favorite: Bool) {
         userDefaults.write(favorite, forKey: placeName)
+        if let favPlace = database.fetchPlace(with: photoReference) {
+            favPlace.favorite = favorite
+            database.save()
+        }
     }
 
     private func saveFavoritePlace() -> Bool {
@@ -27,12 +38,7 @@ final class PlaceViewModel {
 
     // MARK: - Core data
     func image() -> UIImage? {
-
-        guard let photoReference = place.photos.first?.photoReference else {
-            fatalError("Fatal Error: There're no photo")
-        }
         if let data = database.fetchImage(with: photoReference) {
-            
             return UIImage(data: data)
         } else {
             return UIImage(named: "placeholder")

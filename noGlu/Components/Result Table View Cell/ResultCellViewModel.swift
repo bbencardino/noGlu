@@ -42,8 +42,6 @@ struct ResultCellViewModel {
         if let favPlace = database.fetchPlace(with: photoReference) {
             favPlace.favorite = favorite
             database.save()
-//            print(favPlace.favorite)
-//            print(favPlace.name)
         }
     }
 
