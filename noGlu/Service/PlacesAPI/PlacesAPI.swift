@@ -29,13 +29,8 @@ final class PlacesAPI: PlacesProtocol {
         }
     }
 
-    func parsePlaces(data: Data) -> [Place] {
-        let decoder = JSONDecoder()
-        do {
-            let places = try decoder.decode(Response.self, from: data)
-            return places.places
-        } catch {
-            fatalError("Error: not able to parse data to Place. \(error.localizedDescription)")
-        }
+     private func parsePlaces(data: Data) -> [Place]? {
+        let places = try? JSONDecoder().decode(Response.self, from: data)
+        return places?.places
     }
 }
