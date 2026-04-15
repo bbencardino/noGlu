@@ -46,7 +46,7 @@ struct CoreDataManager: Database {
             newPlace.photoReference = place.photos.first?.photoReference
             newPlace.name = place.name
             newPlace.rating = place.rating
-            newPlace.priceLevel = Int32(place.priceLevel ?? 0) 
+            newPlace.priceLevel = Int32(place.priceLevel ?? 0)
             newPlace.favorite = false
             save()
         }

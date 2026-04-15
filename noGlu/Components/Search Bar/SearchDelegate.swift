@@ -14,8 +14,6 @@ final class SearchDelegate: NSObject, UISearchBarDelegate {
         }
     }
 
-   
-
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         viewModel.saveLastSearch(searchBar.text ?? "")
 
